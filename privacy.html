@@ -1,29 +1,157 @@
 <!DOCTYPE html>
-<html lang="en">
+<html class="light" lang="en">
+
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Privacy Policy - 1Save</title>
-    <style>body { font-family: sans-serif; line-height: 1.6; max-width: 800px; margin: 40px auto; padding: 20px; }</style>
+    <!-- Fonts: Montserrat as per Design System -->
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&display=swap"
+        rel="stylesheet" />
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "on-surface-variant": "#424753",
+                        "on-primary-fixed": "#001a41",
+                        "on-tertiary-fixed": "#261a00",
+                        "tertiary-fixed": "#ffdfa0",
+                        "on-secondary-fixed-variant": "#31466f",
+                        "on-tertiary": "#ffffff",
+                        "surface-variant": "#e3e2e6",
+                        "on-error-container": "#93000a",
+                        "primary-fixed": "#d8e2ff",
+                        "secondary-fixed": "#d8e2ff",
+                        "on-secondary-container": "#415680",
+                        "tertiary-fixed-dim": "#fbbc05",
+                        "error": "#ba1a1a",
+                        "outline": "#727785",
+                        "on-secondary": "#ffffff",
+                        "primary-fixed-dim": "#adc6ff",
+                        "surface-tint": "#005ac1",
+                        "secondary": "#495e89",
+                        "on-background": "#1a1b1e",
+                        "secondary-fixed-dim": "#b1c6f7",
+                        "surface-dim": "#dbd9dd",
+                        "outline-variant": "#c2c6d5",
+                        "background": "#faf9fd",
+                        "tertiary-container": "#956e00",
+                        "on-tertiary-fixed-variant": "#5c4300",
+                        "on-error": "#ffffff",
+                        "primary-container": "#2771df",
+                        "inverse-on-surface": "#f1f0f4",
+                        "surface-container-low": "#f4f3f7",
+                        "surface": "#faf9fd",
+                        "on-secondary-fixed": "#001a41",
+                        "on-primary": "#ffffff",
+                        "primary": "#0058bd",
+                        "error-container": "#ffdad6",
+                        "on-tertiary-container": "#fffbff",
+                        "surface-container": "#efedf1",
+                        "surface-container-lowest": "#ffffff",
+                        "tertiary": "#765700",
+                        "on-primary-fixed-variant": "#004494",
+                        "on-primary-container": "#fefcff",
+                        "surface-container-highest": "#e3e2e6",
+                        "inverse-primary": "#adc6ff",
+                        "secondary-container": "#b7ccfd",
+                        "surface-container-high": "#e9e7eb",
+                        "on-surface": "#1a1b1e",
+                        "surface-bright": "#faf9fd",
+                        "inverse-surface": "#2f3033"
+                    },
+                    fontFamily: {
+                        "headline": ["Montserrat", "sans-serif"],
+                        "body": ["Montserrat", "sans-serif"],
+                        "label": ["Montserrat", "sans-serif"]
+                    },
+                    borderRadius: { "DEFAULT": "1rem", "lg": "2rem", "xl": "3rem", "full": "9999px" },
+                },
+            },
+        }
+    </script>
+    <style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+            display: inline-block;
+            line-height: 1;
+        }
+
+        .squircle {
+            border-radius: 1.5rem;
+        }
+
+        .no-border-tonal-shift {
+            border: none !important;
+        }
+
+        .glass-nav {
+            backdrop-filter: blur(20px);
+        }
+
+        body {
+            font-family: 'Montserrat', sans-serif;
+            line-height: 1.5;
+        }
+
+        h1,
+        h2,
+        h3,
+        h4 {
+            font-family: 'Montserrat', sans-serif;
+            letter-spacing: -0.02em;
+            font-weight: 700;
+        }
+    </style>
 </head>
-<body>
-    <h1>Privacy Policy</h1>
-    <p><strong>Last Updated: March 2026</strong></p>
-    <p>This Privacy Policy describes how 1Save ("we", "us", or "the App") handles your information. 1Save is built with a "Privacy by Design" philosophy.</p>
 
-    <h2>1. Data Collection & Usage</h2>
-    <p><strong>Local Content:</strong> 1Save is a local-first utility. All links you save, folder names you create, and passwords you set are stored <strong>locally on your device</strong>. We do not transmit this data to our servers.</p>
-    <p><strong>No Account Required:</strong> You do not need to create an account to use 1Save. Therefore, we do not collect your name, email address, or phone number.</p>
+<body class="bg-background text-on-surface selection:bg-tertiary-fixed selection:text-on-tertiary-fixed">
+    <header class="bg-primary text-white p-8 text-center">
+        <h1 class="text-4xl font-extrabold">Privacy Policy</h1>
+    </header>
+    <main class="max-w-7xl mx-auto px-8 py-16">
+        <h2 class="text-2xl font-bold mb-4">Introduction</h2>
+        <p class="mb-8">Welcome to 1Save! Your privacy is important to us. This Privacy Policy explains how we collect, use, and protect your information when you use our app and services.</p>
 
-    <h2>2. Security & Encryption</h2>
-    <p>The "Secret Folder" feature uses local encryption. Because we do not store your passwords on a server, <strong>we cannot recover your password if you lose it.</strong> Your security is entirely under your control.</p>
+        <h2 class="text-2xl font-bold mb-4">Information We Collect</h2>
+        <p class="mb-4">We collect the following types of information:</p>
+        <ul class="list-disc pl-8 mb-8">
+            <li><strong>Personal Information:</strong> If you sign up for a premium account, we may collect your email address and payment details.</li>
+            <li><strong>Saved Content:</strong> URLs, folder names, and metadata you save within the app.</li>
+            <li><strong>Device Information:</strong> Basic device data (e.g., operating system, app version) to ensure compatibility and improve performance.</li>
+        </ul>
 
-    <h2>3. Third-Party Services</h2>
-    <p>We do not share your data with third parties. The App does not contain third-party advertising or analytics SDKs that track your personal behavior.</p>
+        <h2 class="text-2xl font-bold mb-4">How We Use Your Information</h2>
+        <p class="mb-8">Your data is used to provide and improve our services:</p>
+        <ul class="list-disc pl-8 mb-8">
+            <li>Sync your saved content across devices (for premium users).</li>
+            <li>Backup your data securely to prevent loss.</li>
+            <li>Analyze app performance and fix issues.</li>
+        </ul>
 
-    <h2>4. Data Retention & Deletion</h2>
-    <p>Since all data is stored on your device, you can delete all your data at any time by simply uninstalling the App or clearing the App's cache in your Android settings.</p>
+        <h2 class="text-2xl font-bold mb-4">Data Storage and Security</h2>
+        <p class="mb-8">We use a <strong>Local-First</strong> approach, meaning your data is primarily stored on your device. For all users, saved links and associated metadata are collected and securely stored. For premium users, data is synced to Google Cloud Firestore for backup and multi-device access. We implement industry-standard security measures to protect your data, including encryption and secure authentication protocols.</p>
 
-    <h2>5. Contact Us</h2>
-    <p>If you have questions about this policy, contact us at: <strong>support@1save.app</strong></p>
+        <h2 class="text-2xl font-bold mb-4">Your Rights</h2>
+        <p class="mb-4">You have the right to:</p>
+        <ul class="list-disc pl-8 mb-8">
+            <li>Access and export your data.</li>
+            <li>Delete your account and associated data.</li>
+        </ul>
+        <p class="mb-8">To exercise these rights, contact us at <a href="mailto:support@1save.app" class="text-primary hover:underline">support@1save.app</a>.</p>
+
+        <h2 class="text-2xl font-bold mb-4">Third-Party Services</h2>
+        <p class="mb-8">We use third-party services like Firebase for authentication and Firestore for data backup. These services comply with strict data protection regulations.</p>
+
+        <h2 class="text-2xl font-bold mb-4">Changes to This Policy</h2>
+        <p class="mb-8">We may update this Privacy Policy from time to time. Any changes will be posted on this page with an updated revision date.</p>
+
+        <h2 class="text-2xl font-bold mb-4">Contact Us</h2>
+        <p>If you have any questions about this Privacy Policy, please contact us at <a href="mailto:support@1save.app" class="text-primary hover:underline">support@1save.app</a>.</p>
+    </main>
 </body>
+
 </html>

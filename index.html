@@ -1,27 +1,477 @@
 <!DOCTYPE html>
-<html lang="en">
+
+<html class="light" lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>1Save | Secure Link Management</title>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <meta name="description" content="1Save: The secure private vault to save social media links, set smart reminders, and protect content with password-locked folders.">
+    <meta name="keywords" content="productivity, link saver, social media bookmarks, private folder, password lock app, 1save">
+    <meta name="robots" content="index, follow">
+    <meta property="og:title" content="1Save - Your Secure Link Vault">
+    <meta property="og:description" content="Save links, set reminders, and lock your content.">
+    <meta property="og:image" content="assets/logo.png">
+    <meta property="og:url" content="https://1save.app">
+    <meta name="twitter:card" content="summary_large_image">
+    <title>1Save | One Tap. One Vault.</title>
+    <!-- Material Symbols -->
+    <link
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+        rel="stylesheet" />
+    <!-- Fonts: Montserrat as per Design System -->
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&display=swap"
+        rel="stylesheet" />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+        rel="stylesheet" />
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "on-surface-variant": "#424753",
+                        "on-primary-fixed": "#001a41",
+                        "on-tertiary-fixed": "#261a00",
+                        "tertiary-fixed": "#ffdfa0",
+                        "on-secondary-fixed-variant": "#31466f",
+                        "on-tertiary": "#ffffff",
+                        "surface-variant": "#e3e2e6",
+                        "on-error-container": "#93000a",
+                        "primary-fixed": "#d8e2ff",
+                        "secondary-fixed": "#d8e2ff",
+                        "on-secondary-container": "#415680",
+                        "tertiary-fixed-dim": "#fbbc05",
+                        "error": "#ba1a1a",
+                        "outline": "#727785",
+                        "on-secondary": "#ffffff",
+                        "primary-fixed-dim": "#adc6ff",
+                        "surface-tint": "#005ac1",
+                        "secondary": "#495e89",
+                        "on-background": "#1a1b1e",
+                        "secondary-fixed-dim": "#b1c6f7",
+                        "surface-dim": "#dbd9dd",
+                        "outline-variant": "#c2c6d5",
+                        "background": "#faf9fd",
+                        "tertiary-container": "#956e00",
+                        "on-tertiary-fixed-variant": "#5c4300",
+                        "on-error": "#ffffff",
+                        "primary-container": "#2771df",
+                        "inverse-on-surface": "#f1f0f4",
+                        "surface-container-low": "#f4f3f7",
+                        "surface": "#faf9fd",
+                        "on-secondary-fixed": "#001a41",
+                        "on-primary": "#ffffff",
+                        "primary": "#0058bd",
+                        "error-container": "#ffdad6",
+                        "on-tertiary-container": "#fffbff",
+                        "surface-container": "#efedf1",
+                        "surface-container-lowest": "#ffffff",
+                        "tertiary": "#765700",
+                        "on-primary-fixed-variant": "#004494",
+                        "on-primary-container": "#fefcff",
+                        "surface-container-highest": "#e3e2e6",
+                        "inverse-primary": "#adc6ff",
+                        "secondary-container": "#b7ccfd",
+                        "surface-container-high": "#e9e7eb",
+                        "on-surface": "#1a1b1e",
+                        "surface-bright": "#faf9fd",
+                        "inverse-surface": "#2f3033"
+                    },
+                    fontFamily: {
+                        "headline": ["Montserrat", "sans-serif"],
+                        "body": ["Montserrat", "sans-serif"],
+                        "label": ["Montserrat", "sans-serif"]
+                    },
+                    borderRadius: { "DEFAULT": "1rem", "lg": "2rem", "xl": "3rem", "full": "9999px" },
+                },
+            },
+        }
+    </script>
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "SoftwareApplication",
+      "name": "1Save",
+      "operatingSystem": "Android",
+      "applicationCategory": "UtilitiesApplication"
+    }
+    </script>
     <style>
-        body { font-family: sans-serif; line-height: 1.6; max-width: 800px; margin: 40px auto; padding: 20px; text-align: center; }
-        .btn { background: #007bff; color: white; padding: 10px 20px; text-decoration: none; border-radius: 5px; }
-        footer { margin-top: 50px; font-size: 0.9em; color: #666; }
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+            display: inline-block;
+            line-height: 1;
+        }
+
+        .squircle {
+            border-radius: 1.5rem;
+        }
+
+        .no-border-tonal-shift {
+            border: none !important;
+        }
+
+        .glass-nav {
+            backdrop-filter: blur(20px);
+        }
+
+        body {
+            font-family: 'Montserrat', sans-serif;
+            line-height: 1.5;
+        }
+
+        h1,
+        h2,
+        h3,
+        h4 {
+            font-family: 'Montserrat', sans-serif;
+            letter-spacing: -0.02em;
+            font-weight: 700;
+        }
     </style>
 </head>
-<body>
-    <h1>1Save</h1>
-    <p>Organize your digital life. Save social media links, set reminders, and protect your privacy with encrypted local folders.</p>
-    <p><strong>Coming Soon to Google Play</strong></p>
-    
-    <div style="margin: 30px 0;">
-        <img src="your-screenshot-placeholder.png" alt="1Save App Preview" style="max-width: 300px; border-radius: 20px; border: 1px solid #ddd;">
-    </div>
 
-    <footer>
-        <a href="privacy.html">Privacy Policy</a> | 
-        <a href="mailto:support@1save.app">Support</a>
+<body class="bg-background text-on-surface selection:bg-tertiary-fixed selection:text-on-tertiary-fixed">
+    <!-- TopNavBar -->
+    <nav class="fixed top-0 w-full z-50 bg-[#faf9fd]/60 backdrop-blur-xl shadow-sm no-border-tonal-shift">
+        <div class="max-w-7xl mx-auto px-8 py-4 flex justify-between items-center">
+            <div class="flex items-center gap-3 text-[#1a1b1e] font-extrabold text-xl">
+                <img src="assets/logo.png" alt="1Save Logo" class="w-8 h-8 rounded-lg shadow-sm" />
+                <span class="font-headline tracking-tight">1Save</span>
+            </div>
+            <!-- <div class="hidden md:flex items-center gap-10">
+                <a class="text-[#0058bd] font-semibold border-b-2 border-[#fbbc05]" href="#vault">Vault</a>
+                <a class="text-[#1a1b1e]/70 hover:text-[#0058bd] transition-colors duration-200"
+                    href="#archival">Archival</a>
+                <a class="text-[#1a1b1e]/70 hover:text-[#0058bd] transition-colors duration-200"
+                    href="#intelligence">Intelligence</a>
+                <a class="text-[#1a1b1e]/70 hover:text-[#0058bd] transition-colors duration-200"
+                    href="#control">Control</a>
+            </div> -->
+            <div class="flex items-center gap-6">
+                <!-- <button class="material-symbols-outlined text-on-surface-variant hover:text-primary transition-colors"
+                    data-icon="search">search</button> -->
+                <button
+                    class="bg-primary text-white px-6 py-2.5 squircle font-semibold text-sm hover:scale-95 transition-transform">Start
+                    Saving</button>
+            </div>
+        </div>
+    </nav>
+    <main class="pt-32">
+        <!-- Hero Section -->
+        <section id="vault" class="max-w-7xl mx-auto px-8 mb-32 flex flex-col items-center text-center">
+            <h1 class="text-6xl md:text-8xl font-extrabold text-on-surface mb-8 max-w-4xl">
+                One Tap. <br />One Vault. <br /><span class="text-primary">1Save.</span>
+            </h1>
+            <p class="text-xl text-on-surface-variant max-w-2xl leading-relaxed mb-12">
+                Your digital world is scattered. Anchor it in a single, high-performance space designed for what
+                matters.
+            </p>
+            <div class="flex flex-col md:flex-row gap-4">
+                <button
+                    class="bg-[#fbbc05] text-on-tertiary-fixed px-10 py-4 squircle font-bold text-lg shadow-lg hover:shadow-xl transition-all">
+                    Start Saving
+                </button>
+                <button
+                    onclick="document.getElementById('archival').scrollIntoView({behavior: 'smooth'});" class="border-2 border-primary text-primary px-10 py-4 squircle font-bold text-lg hover:bg-primary/5 transition-colors">
+                    View Features
+                </button>
+            </div>
+            <!-- Hero Visual: Stacked Archival Layers -->
+            <!-- <div class="mt-20 relative w-full max-w-5xl mx-auto h-[400px]">
+                <div class="absolute inset-0 bg-surface-container-low rounded-[3rem] -rotate-1 translate-y-4"></div>
+                <div class="absolute inset-0 bg-surface-container-high rounded-[3rem] rotate-1 -translate-y-2"></div>
+                <div
+                    class="absolute inset-0 bg-white rounded-[3rem] shadow-xl overflow-hidden flex items-center justify-center p-8">
+                    <img alt="Digital Vault Preview" class="w-full h-full object-cover squircle opacity-90"
+                        data-alt="Abstract minimalist digital workspace with soft blue and gold gradients, organized paper layers, and clean professional aesthetic"
+                        src="https://lh3.googleusercontent.com/aida-public/AB6AXuAvePp4xPDUslLRG2zgxNUKfTqu3enCT2t_OxlQFzrQS8rg49VrLR9F2S0gYQdDVfgMlqECQtsyTES9bEi931s3Ng56QjIVciK7lMTn7qiNWEAPFZwXsuS7qIKYN00SHs3IjnBW7NGJ1VELMphorkQx0uzkbYGcXGk_nJCib_mC557qIvaH-CwHkFf1GNFGi-wAvz7qtnr8xlsln51xY4zOaQeDU4K0sUvRoGCCcbFMqKjes8ncb5dm25Ln8e6ga7Gaxm5yUwi1hhmE" />
+                    <div
+                        class="absolute bottom-12 left-12 right-12 bg-white/80 backdrop-blur-md p-8 squircle flex items-center justify-between shadow-sm">
+                        <div class="flex items-center gap-4">
+                            <div
+                                class="w-12 h-12 bg-primary-container rounded-xl flex items-center justify-center text-white">
+                                <span class="material-symbols-outlined" data-icon="cloud_done"
+                                    style="font-variation-settings: 'FILL' 1;">cloud_done</span>
+                            </div>
+                            <div class="text-left">
+                                <p class="font-headline font-bold text-on-surface">Sync Complete</p>
+                                <p class="text-xs text-on-surface-variant">Securely backed up to cloud</p>
+                            </div>
+                        </div>
+                        <div class="h-1 w-32 bg-surface-container-highest rounded-full overflow-hidden">
+                            <div class="h-full bg-tertiary-fixed-dim w-3/4"></div>
+                        </div>
+                    </div>
+                </div>
+            </div> -->
+        </section>
+                <!-- How It Works Section -->
+                <section id="how" class="max-w-5xl mx-auto px-8 mb-32">
+                    <div class="bg-white squircle shadow-md p-10 md:p-16 text-center">
+                        <span class="text-primary font-bold uppercase tracking-widest text-xs mb-4 block">How It Works</span>
+                        <h2 class="text-3xl md:text-4xl font-bold mb-8">Save Anything. Find It Instantly.</h2>
+                        <div class="grid grid-cols-1 md:grid-cols-3 gap-8 text-left">
+                            <div class="flex flex-col items-center">
+                                <div class="w-14 h-14 bg-primary-fixed rounded-2xl flex items-center justify-center mb-4">
+                                    <span class="material-symbols-outlined text-primary text-3xl" data-icon="share">share</span>
+                                </div>
+                                <h3 class="font-bold mb-2">1. Capture Instantly</h3>
+                                <p class="text-on-surface-variant text-sm">Use your device's share menu to save links, articles, or notes from any app in one tap.</p>
+                            </div>
+                            <div class="flex flex-col items-center">
+                                <div class="w-14 h-14 bg-tertiary-fixed rounded-2xl flex items-center justify-center mb-4">
+                                    <span class="material-symbols-outlined text-tertiary text-3xl" data-icon="folder_special">folder_special</span>
+                                </div>
+                                <h3 class="font-bold mb-2">2. Organize Effortlessly</h3>
+                                <p class="text-on-surface-variant text-sm">Group your saves into folders, add notes for easy retrieval.</p>
+                            </div>
+                            <div class="flex flex-col items-center">
+                                <div class="w-14 h-14 bg-primary-fixed rounded-2xl flex items-center justify-center mb-4">
+                                    <span class="material-symbols-outlined text-primary text-3xl" data-icon="search">search</span>
+                                </div>
+                                <h3 class="font-bold mb-2">3. Find & Resurface</h3>
+                                <p class="text-on-surface-variant text-sm">Instantly search your vault or set reminders to resurface what matters, when it matters.</p>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+        <!-- The Capture Block -->
+        <!-- <section id="archival" class="max-w-7xl mx-auto px-8 mb-32">
+            <div class="bg-surface-container-low squircle p-12 md:p-24 flex flex-col md:flex-row items-center gap-16">
+                <div class="w-full md:w-1/2">
+                    <span class="text-tertiary font-bold uppercase tracking-widest text-xs mb-4 block">Frictionless
+                        Entry</span>
+                    <h2 class="text-4xl md:text-5xl font-bold mb-6">The Capture Block</h2>
+                    <p class="text-lg text-on-surface-variant leading-relaxed mb-8">
+                        Preservation begins with a single tap. 1Save eliminates the distance between discovery and
+                        storage. Capture bookmarks, code snippets, and intellectual fragments instantly without leaving
+                        your workflow.
+                    </p>
+                    <ul class="space-y-4">
+                        <li class="flex items-center gap-3">
+                            <span class="material-symbols-outlined text-primary" data-icon="check_circle"
+                                style="font-variation-settings: 'FILL' 1;">check_circle</span>
+                            <span class="font-medium">Native OS Share Menu integration</span>
+                        </li>
+                        <li class="flex items-center gap-3">
+                            <span class="material-symbols-outlined text-primary" data-icon="check_circle"
+                                style="font-variation-settings: 'FILL' 1;">check_circle</span>
+                            <span class="font-medium">Automated metadata extraction</span>
+                        </li>
+                        <li class="flex items-center gap-3">
+                            <span class="material-symbols-outlined text-primary" data-icon="check_circle"
+                                style="font-variation-settings: 'FILL' 1;">check_circle</span>
+                            <span class="font-medium">Local-first database architecture</span>
+                        </li>
+                    </ul>
+                </div>
+                <div class="w-full md:w-1/2 grid grid-cols-2 gap-4">
+                    <div class="bg-white p-6 squircle shadow-sm space-y-4">
+                        <div class="w-10 h-10 bg-primary-fixed rounded-lg flex items-center justify-center">
+                            <span class="material-symbols-outlined text-primary" data-icon="bookmark"
+                                style="font-variation-settings: 'FILL' 1;">bookmark</span>
+                        </div>
+                        <p class="font-bold text-sm">Article Saved</p>
+                        <div class="h-2 w-full bg-surface-container rounded-full"></div>
+                    </div>
+                    <div class="bg-white p-6 squircle shadow-sm space-y-4 mt-8">
+                        <div class="w-10 h-10 bg-tertiary-fixed rounded-lg flex items-center justify-center">
+                            <span class="material-symbols-outlined text-tertiary" data-icon="code"
+                                style="font-variation-settings: 'FILL' 1;">code</span>
+                        </div>
+                        <p class="font-bold text-sm">Snippet Cached</p>
+                        <div class="h-2 w-full bg-surface-container rounded-full"></div>
+                    </div>
+                </div>
+            </div>
+        </section> -->
+        <!-- The Analytics Block -->
+        <!-- <section id="intelligence" class="max-w-7xl mx-auto px-8 mb-32 text-center">
+            <div class="max-w-3xl mx-auto mb-16">
+                <span class="text-primary font-bold uppercase tracking-widest text-xs mb-4 block">Structural
+                    Logic</span>
+                <h2 class="text-4xl md:text-5xl font-bold mb-6">The Analytics Block</h2>
+                <p class="text-lg text-on-surface-variant leading-relaxed">
+                    A vault is only as good as its structure. 1Save helps you securely organize and group your data,
+                    keeping a clear and clean overview of your digital assets.
+                </p>
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div class="bg-white p-10 squircle shadow-sm hover:shadow-md transition-shadow text-left group">
+                    <div
+                        class="w-14 h-14 bg-surface-container-low rounded-2xl flex items-center justify-center mb-6 group-hover:bg-primary/10 transition-colors">
+                        <span class="material-symbols-outlined text-primary text-3xl" data-icon="folder">folder</span>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3">Structured Folders</h3>
+                    <p class="text-on-surface-variant text-sm leading-relaxed">Group related links and content into
+                        dedicated, easy-to-navigate logical folders.</p>
+                </div>
+                <div class="bg-white p-10 squircle shadow-sm hover:shadow-md transition-shadow text-left group">
+                    <div
+                        class="w-14 h-14 bg-surface-container-low rounded-2xl flex items-center justify-center mb-6 group-hover:bg-primary/10 transition-colors">
+                        <span class="material-symbols-outlined text-primary text-3xl" data-icon="bolt">bolt</span>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3">High Performance</h3>
+                    <p class="text-on-surface-variant text-sm leading-relaxed">Local-first data architecture ensures
+                        near-instant loading and interaction times.</p>
+                </div>
+                <div class="bg-white p-10 squircle shadow-sm hover:shadow-md transition-shadow text-left group">
+                    <div
+                        class="w-14 h-14 bg-surface-container-low rounded-2xl flex items-center justify-center mb-6 group-hover:bg-primary/10 transition-colors">
+                        <span class="material-symbols-outlined text-primary text-3xl" data-icon="search">search</span>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3">Instant Search</h3>
+                    <p class="text-on-surface-variant text-sm leading-relaxed">Quickly filter your entire repository by
+                        title or URL without distraction.</p>
+                </div>
+            </div>
+        </section> -->
+        <!-- The Retrieval Block -->
+        <!-- <section class="max-w-7xl mx-auto px-8 mb-32">
+            <div class="flex flex-col md:flex-row-reverse items-center gap-16">
+                <div class="w-full md:w-1/2">
+                    <span class="text-tertiary font-bold uppercase tracking-widest text-xs mb-4 block">The Gold
+                        Standard</span>
+                    <h2 class="text-4xl md:text-5xl font-bold mb-6">The Retrieval Block</h2>
+                    <p class="text-lg text-on-surface-variant leading-relaxed mb-8">
+                        Information is useless if hidden. Our "Gold Bookmark" system highlights the most relevant
+                        fragments from your history exactly when you need them. No digging, just discovery.
+                    </p>
+                    <div class="space-y-6">
+                        <div class="flex gap-4 p-4 bg-white squircle shadow-sm border-l-4 border-tertiary-fixed-dim">
+                            <span class="material-symbols-outlined text-tertiary" data-icon="flash_on">flash_on</span>
+                            <div>
+                                <p class="font-bold text-sm">Lightning Fast</p>
+                                <p class="text-xs text-on-surface-variant">Instantly query your personal database.</p>
+                            </div>
+                        </div>
+                        <button
+                            class="bg-on-surface text-white px-8 py-4 squircle font-bold flex items-center gap-2 hover:bg-black transition-colors">
+                            Master the Vault
+                            <span class="material-symbols-outlined" data-icon="arrow_forward">arrow_forward</span>
+                        </button>
+                    </div>
+                </div>
+                <div class="w-full md:w-1/2 relative">
+                    <img alt="Retrieval Logic Visual" class="w-full h-[500px] object-cover squircle shadow-2xl"
+                        data-alt="Modern minimalist library archive with golden lighting and systematic glass shelves, representing organized data retrieval"
+                        src="https://lh3.googleusercontent.com/aida-public/AB6AXuDR_JICapHdgCBke3xMwIsA50qlmhyslLXcfFta8aSVLWBLsAdYXXrCGZ9UO9DQ-o_ABC1D5KmIE4ZRF1gMqV8XOjd97MjuNcE_hcjTMPdODG7VokYRhIsPHyji8BQLTJLRrSWg1cXSpw6fA3kmiWyUGHpBHrwn4kNGiiM6W3QAHHhZaMU4O2gIXUvs24CLiH9J646mwglczDPAPu4WtmwpK2QKfbg6Qc_fvHM1N_qB_8c3mK1kjIrPFARBdGjteEbJadONbOiBnqg0" />
+                    
+                    <div class="absolute -top-6 -right-6 bg-tertiary text-white p-8 squircle shadow-2xl max-w-[240px]">
+                        <span class="material-symbols-outlined text-4xl mb-4" data-icon="star"
+                            style="font-variation-settings: 'FILL' 1;">star</span>
+                        <p class="font-headline font-bold text-xl mb-2">Exact Match</p>
+                        <p class="text-xs opacity-80 leading-relaxed">Precision retrieval across your entire personal
+                            archive.</p>
+                    </div>
+                </div>
+            </div>
+        </section> -->
+        <!-- The Control Block -->
+        <section id="control" class="max-w-7xl mx-auto px-8 mb-32">
+            <div class="bg-surface-container-low squircle p-12 md:p-24 flex flex-col md:flex-row items-center gap-16">
+                <div class="w-full md:w-1/2">
+                    <span class="text-primary font-bold uppercase tracking-widest text-xs mb-4 block">Absolute
+                        Authority</span>
+                    <h2 class="text-4xl md:text-5xl font-bold mb-6">What make us different?</h2>
+                    <p class="text-lg text-on-surface-variant leading-relaxed mb-8">
+                        Your archive should actively serve you while remaining guarded. Set precise push notifications
+                        to resurface critical links exactly when needed, and lock sensitive assets behind local
+                        biometric security.
+                    </p>
+                    <ul class="space-y-4">
+                        <li class="flex items-center gap-3">
+                            <span class="material-symbols-outlined text-primary" data-icon="lock"
+                                style="font-variation-settings: 'FILL' 1;">lock</span>
+                            <span class="font-medium">Password Secure Folder</span>
+                        </li>
+                        <li class="flex items-center gap-3">
+                            <span class="material-symbols-outlined text-primary" data-icon="notifications_active"
+                                style="font-variation-settings: 'FILL' 1;">notifications_active</span>
+                            <span class="font-medium">Actionable Resurface Reminders</span>
+                        </li>
+                    </ul>
+                </div>
+                <div class="w-full md:w-1/2 flex flex-col gap-6">
+
+                    <div class="bg-white p-6 squircle shadow-sm flex items-center gap-6 border-l-4 border-[#005ac1]">
+                        <div
+                            class="w-12 h-12 bg-primary-fixed rounded-xl flex min-w-[3rem] items-center justify-center">
+                            <span class="material-symbols-outlined text-primary" data-icon="pin"
+                                style="font-variation-settings: 'FILL' 1;">pin</span>
+                        </div>
+                        <div>
+                            <p class="font-bold text-lg">Secure Vault Locked</p>
+                            <p class="text-sm text-on-surface-variant">PIN required for access.</p>
+                        </div>
+                    </div>
+
+                    <div
+                        class="bg-white p-6 squircle shadow-sm flex items-center gap-6 border-l-4 border-tertiary-fixed-dim md:-translate-x-8">
+                        <div
+                            class="w-12 h-12 bg-tertiary-fixed rounded-xl flex min-w-[3rem] items-center justify-center">
+                            <span class="material-symbols-outlined text-tertiary" data-icon="schedule"
+                                style="font-variation-settings: 'FILL' 1;">schedule</span>
+                        </div>
+                        <div>
+                            <p class="font-bold text-lg">Reminder Triggered</p>
+                            <p class="text-sm text-on-surface-variant">Never missed what you saved before</p>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+        <!-- Final CTA -->
+        <section id="pricing" class="max-w-7xl mx-auto px-8 mb-16">
+            <div class="bg-primary-container p-16 md:p-32 squircle text-center text-white relative overflow-hidden">
+                <!-- Background decorative shape -->
+                <div class="absolute top-0 right-0 w-96 h-96 bg-white/5 rounded-full -translate-y-1/2 translate-x-1/2">
+                </div>
+                <h2 class="text-4xl md:text-6xl font-extrabold mb-8 relative z-10">Secure Your Digital Legacy.</h2>
+                <p class="text-xl opacity-90 mb-12 max-w-2xl mx-auto relative z-10">Anchor your scattered digital world
+                    efficiently in 1Save today.</p>
+                <div class="flex justify-center relative z-10">
+                    <button
+                        class="bg-white text-primary px-12 py-5 squircle font-bold text-xl shadow-xl hover:scale-105 transition-transform">
+                        Start Saving Now
+                    </button>
+                </div>
+            </div>
+        </section>
+    </main>
+    <!-- Footer -->
+    <footer class="w-full rounded-t-[2rem] mt-16 bg-[#f4f3f7] no-border-tonal-shift">
+        <div class="max-w-7xl mx-auto px-12 py-16 grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
+            <div>
+                <div class="text-[#1a1b1e] font-bold text-2xl mb-4 flex items-center gap-3">
+                    <img src="assets/logo.png" alt="1Save Logo" class="w-8 h-8 rounded-lg shadow-sm" />
+                    1Save
+                </div>
+                <p class="text-sm leading-relaxed text-[#1a1b1e]/60 max-w-md mb-8">
+                    © 2026 1Save Digital Archival. Designed for the Digital Curator. Finality in preservation, clarity
+                    in intelligence.
+                </p>
+            </div>
+            <div class="grid grid-cols-2 gap-8 text-right md:text-left">
+                <div class="flex flex-col gap-4">
+                    <a class="text-[#1a1b1e]/60 hover:text-[#0058bd] underline-offset-4 hover:underline transition-all"
+                        href="privacy.html">Privacy Policy</a>
+                    <a class="text-[#1a1b1e]/60 hover:text-[#0058bd] underline-offset-4 hover:underline transition-all"
+                        href="#">Terms of Service</a>
+                </div>
+                <div class="flex flex-col gap-4">
+                    <a class="text-[#1a1b1e]/60 hover:text-[#0058bd] underline-offset-4 hover:underline transition-all"
+                        href="#">Archival Standards</a>
+                    <a class="text-[#1a1b1e]/60 hover:text-[#0058bd] underline-offset-4 hover:underline transition-all"
+                        href="#">Contact Support</a>
+                </div>
+            </div>
+        </div>
     </footer>
 </body>
+
 </html>
