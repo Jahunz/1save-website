@@ -4,4 +4,7 @@ Allow: /
 User-agent: facebookexternalhit
 Allow: /
 
+User-agent: Facebot
+Allow: /
+
 Sitemap: https://1save.app/sitemap.xml
