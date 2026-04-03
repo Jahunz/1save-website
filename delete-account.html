@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html class="light" lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <link rel="icon" href="assets/favicon.png" sizes="48x48" type="image/png">
+    <link rel="icon" href="assets/favicon.png" sizes="96x96" type="image/png">
+    <link rel="icon" href="assets/favicon.png" sizes="144x144" type="image/png">
+    <link rel="apple-touch-icon" href="assets/logo.png">
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+
+    <title>Delete Account | 1Save</title>
+    <!-- Fonts: Montserrat as per Design System -->
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&display=swap"
+        rel="stylesheet" />
+    <!-- Material Symbols -->
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+        rel="stylesheet" />
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-3QZ41BPEPX"></script>
+    <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-3QZ41BPEPX');
+    </script>
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#0058bd",
+                        "on-primary": "#ffffff",
+                        "surface": "#faf9fd",
+                        "on-surface": "#1a1b1e",
+                        "error": "#ba1a1a",
+                        "outline": "#727785"
+                    },
+                    fontFamily: {
+                        "headline": ["Montserrat", "sans-serif"],
+                        "body": ["Montserrat", "sans-serif"]
+                    }
+                }
+            }
+        };
+    </script>
+    <style>
+        body {
+            font-family: "Montserrat", sans-serif;
+            background-color: var(--theme-surface, #faf9fd);
+            color: var(--theme-on-surface, #1a1b1e);
+        }
+    </style>
+</head>
+
+<body class="bg-surface text-on-surface min-h-screen flex flex-col justify-between">
+    <!-- Header -->
+    <header class="w-full bg-surface py-4 shadow-sm">
+        <div class="max-w-4xl mx-auto px-4 flex items-center justify-between">
+            <a href="index.html" class="flex items-center gap-2">
+                <img src="assets/logo.png" alt="1Save Logo" class="h-8 w-8" />
+                <span class="font-bold text-xl text-primary">1Save</span>
+            </a>
+            <a href="index.html" class="text-primary font-medium hover:underline text-sm">Return to Home</a>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="flex-grow flex items-center justify-center py-12 px-4 shadow-sm">
+        <div id="form-container" class="max-w-md w-full bg-white rounded-3xl shadow-lg p-8 border border-gray-100">
+            <div class="text-center mb-8">
+                <span class="material-symbols-outlined text-error text-5xl mb-2">person_remove</span>
+                <h1 class="text-2xl font-bold text-[#EA4335] mb-2">Request Account Deletion</h1>
+                
+            </div>
+            <iframe data-tally-src="https://tally.so/embed/D4D0AZ?alignLeft=1&hideTitle=1&transparentBackground=1&dynamicHeight=1" loading="lazy" width="100%" height="301" frameborder="0" marginheight="0" marginwidth="0" title="Account Deletion Support"></iframe>
+<script>var d=document,w="https://tally.so/widgets/embed.js",v=function(){"undefined"!=typeof Tally?Tally.loadEmbeds():d.querySelectorAll("iframe[data-tally-src]:not([src])").forEach((function(e){e.src=e.dataset.tallySrc}))};if("undefined"!=typeof Tally)v();else if(d.querySelector('script[src="'+w+'"]')==null){var s=d.createElement("script");s.src=w,s.onload=v,s.onerror=v,d.body.appendChild(s);}</script>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="w-full bg-surface border-t border-gray-200 py-6">
+        <div class="max-w-4xl mx-auto px-4 text-center text-sm text-outline">
+            &copy; 2026 1Save App. All rights reserved. <br/>
+            <span class="mt-2 block"><a href="privacy.html" class="hover:underline text-primary">Privacy Policy</a></span>
+        </div>
+    </footer>
+</body>
+
+</html>
