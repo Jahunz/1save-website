@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>1Save - Feature Graphic Generator</title>
+    <!-- Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <!-- Icons -->
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet">
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#4285F4',
+                        primaryLight: '#D2E3FC',
+                        secondary: '#FBBC04',
+                        accentLight: '#FEEFC3',
+                        background: '#FFFFFF',
+                        surface: '#F1F3F4',
+                        textPrimary: '#202124',
+                        textSecondary: '#9AA0A6',
+                        destructive: '#EA4335'
+                    },
+                    fontFamily: {
+                        sans: ['Montserrat', 'sans-serif'],
+                    },
+                    boxShadow: {
+                        'soft': '0 20px 40px -10px rgba(66, 133, 244, 0.15)',
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        body {
+            /* Neutral background so the graphic stands out */
+            background-color: #2f3033;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            margin: 0;
+            flex-direction: column;
+            gap: 20px;
+            padding: 40px;
+        }
+
+        /* The Exact Google Play Feature Graphic Specifications */
+        .feature-graphic {
+            width: 1024px;
+            height: 500px;
+            background-color: #FFFFFF; /* Base background from theme */
+            position: relative;
+            overflow: hidden;
+            box-sizing: border-box;
+            flex-shrink: 0;
+        }
+
+        /* The Open Graph Image Specifications */
+        .web-preview-graphic {
+            width: 1280px;
+            height: 630px;
+            background-color: #FFFFFF;
+            position: relative;
+            overflow: hidden;
+            box-sizing: border-box;
+            flex-shrink: 0;
+        }
+
+        .instruction {
+            color: white;
+            font-family: 'Montserrat', sans-serif;
+            margin-top: 40px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="instruction text-center !mt-0">
+        <h2 class="text-xl font-bold mb-2">1. Google Play Feature Graphic (1024x500)</h2>
+        <p class="text-sm opacity-80">Right-click the box below -> "Inspect" -> "Capture node screenshot"</p>
+    </div>
+
+    <!-- The 1024x500 Container -->
+    <div class="feature-graphic bg-gradient-to-br from-white to-[#f8fbff] shadow-2xl rounded-sm" id="export-target">
+        
+        <!-- Abstract Background Orbs for visual interest (using theme colors) -->
+        <div class="absolute -top-40 -left-20 w-[500px] h-[500px] bg-primaryLight rounded-full opacity-40 blur-[80px]"></div>
+        <div class="absolute -bottom-60 right-0 w-[600px] h-[600px] bg-accentLight rounded-full opacity-50 blur-[100px]"></div>
+
+        <!-- Content Wrapper -->
+        <div class="relative w-full h-full flex items-center z-10">
+            
+            <!-- Left Side: Copywriting -->
+            <div class="w-[55%] pl-24 flex flex-col justify-center">
+                <!-- App Icon Placeholder / Logo -->
+                <div class="flex items-center gap-4 mb-6">
+                    <img src="assets/logo.png" alt="1Save Logo" class="w-16 h-16 rounded-2xl shadow-lg shadow-primary/30 object-contain bg-white">
+                    <span class="text-3xl font-extrabold text-textPrimary tracking-tight">1Save</span>
+                </div>
+
+                <!-- Tagline -->
+                <h1 class="text-[3.5rem] leading-[1.1] font-extrabold text-textPrimary mb-6">
+                    <span class="text-primary">Save links.</span><br>
+                    Secure the rest.
+                </h1>
+
+                <!-- Subtitle -->
+                <p class="text-xl text-textSecondary font-medium max-w-sm leading-relaxed">
+                    The minimalist vault for all your <br>saved posts, articles, and ideas.
+                </p>
+            </div>
+
+            <!-- Right Side: Abstract App UI Visualization -->
+            <div class="w-[45%] h-full relative flex justify-center items-end">
+                
+                <!-- Floating device mockup -->
+                <div class="w-[300px] h-[400px] bg-white rounded-t-[40px] border-x-[8px] border-t-[8px] border-surface shadow-soft relative translate-x-12 translate-y-4 flex flex-col px-6 pt-10">
+                    <!-- Notch/Pill -->
+                    <div class="absolute top-4 left-1/2 -translate-x-1/2 w-20 h-1.5 bg-surface rounded-full"></div>
+                    
+                    <h2 class="text-2xl font-bold text-textPrimary mb-6">Folders</h2>
+
+                    <!-- UI Card 1 : Locked Folder -->
+                    <div class="w-full bg-[#fef0c7] rounded-[20px] p-4 flex items-center gap-3 mb-4 border border-[#fde293]">
+                        <div class="w-12 h-12 bg-white rounded-full flex items-center justify-center shadow-sm">
+                            <span class="material-symbols-outlined text-secondary" style="font-variation-settings: 'FILL' 1;">lock</span>
+                        </div>
+                        <div class="flex-1">
+                            <div class="w-24 h-3 bg-secondary opacity-40 rounded-full mb-2"></div>
+                            <div class="w-12 h-2 bg-secondary opacity-20 rounded-full"></div>
+                        </div>
+                    </div>
+
+                    <!-- UI Card 2 : Standard Folder -->
+                    <div class="w-full bg-[#f8fbff] rounded-[20px] p-4 flex items-center gap-3 mb-4 border border-primaryLight">
+                        <div class="w-12 h-12 bg-white rounded-full flex items-center justify-center shadow-sm">
+                            <span class="material-symbols-outlined text-primary">folder</span>
+                        </div>
+                        <div class="flex-1">
+                            <div class="w-20 h-3 bg-primary opacity-40 rounded-full mb-2"></div>
+                            <div class="w-16 h-2 bg-primary opacity-20 rounded-full"></div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Abstract overlapping element -->
+                <div class="absolute top-20 right-8 w-16 h-16 bg-white rounded-2xl shadow-xl flex items-center justify-center rotate-12 border border-surface">
+                    <span class="material-symbols-outlined text-destructive text-3xl">favorite</span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Divider -->
+    <hr class="w-full max-w-4xl border-gray-600 my-8">
+
+    <div class="instruction text-center !mt-0">
+        <h2 class="text-xl font-bold mb-2">2. Website Open Graph Preview (1200x630)</h2>
+        <p class="text-sm opacity-80">Right-click the box below -> "Inspect" -> "Capture node screenshot". Save as <b>web_preview.png</b></p>
+    </div>
+
+    <!-- The 1200x630 Container -->
+    <div class="web-preview-graphic bg-gradient-to-br from-white to-[#f8fbff] shadow-2xl rounded-sm" id="export-target-og">
+        
+        <!-- Abstract Background Orbs for visual interest (scaled up for larger canvas) -->
+        <div class="absolute -top-40 -left-20 w-[600px] h-[600px] bg-primaryLight rounded-full opacity-40 blur-[90px]"></div>
+        <div class="absolute -bottom-60 right-0 w-[700px] h-[700px] bg-accentLight rounded-full opacity-50 blur-[120px]"></div>
+
+        <!-- Content Wrapper -->
+        <div class="relative w-full h-full flex items-center z-10">
+            
+            <!-- Left Side: Copywriting -->
+            <div class="w-[55%] pl-32 flex flex-col justify-center">
+                <!-- App Icon Placeholder / Logo -->
+                <div class="flex items-center gap-5 mb-8">
+                    <img src="assets/logo.png" alt="1Save Logo" class="w-20 h-20 rounded-2xl shadow-lg shadow-primary/30 object-contain bg-white">
+                    <span class="text-[2.5rem] font-extrabold text-textPrimary tracking-tight">1Save</span>
+                </div>
+
+                <!-- Tagline -->
+                <h1 class="text-[4rem] leading-[1.15] font-extrabold text-textPrimary mb-8">
+                    <span class="text-primary">Save links.</span><br>
+                    Secure the rest.
+                </h1>
+
+                <!-- Subtitle -->
+                <p class="text-2xl text-textSecondary font-medium max-w-md leading-relaxed">
+                    The minimalist vault for all your <br>saved posts, articles, and ideas.
+                </p>
+            </div>
+
+            <!-- Right Side: Abstract App UI Visualization -->
+            <div class="w-[45%] h-full relative flex justify-center items-end">
+                
+                <!-- Floating device mockup (scaled up) -->
+                <div class="w-[340px] h-[480px] bg-white rounded-t-[40px] border-x-[8px] border-t-[8px] border-surface shadow-soft relative translate-x-12 translate-y-4 flex flex-col px-8 pt-12">
+                    <!-- Notch/Pill -->
+                    <div class="absolute top-5 left-1/2 -translate-x-1/2 w-24 h-2 bg-surface rounded-full"></div>
+                    
+                    <h2 class="text-[1.75rem] font-bold text-textPrimary mb-8">Folders</h2>
+
+                    <!-- UI Card 1 : Locked Folder -->
+                    <div class="w-full bg-[#fef0c7] rounded-[24px] p-5 flex items-center gap-4 mb-5 border border-[#fde293]">
+                        <div class="w-14 h-14 bg-white rounded-full flex items-center justify-center shadow-sm">
+                            <span class="material-symbols-outlined text-secondary text-3xl" style="font-variation-settings: 'FILL' 1;">lock</span>
+                        </div>
+                        <div class="flex-1">
+                            <div class="w-28 h-3.5 bg-secondary opacity-40 rounded-full mb-3"></div>
+                            <div class="w-14 h-2.5 bg-secondary opacity-20 rounded-full"></div>
+                        </div>
+                    </div>
+
+                    <!-- UI Card 2 : Standard Folder -->
+                    <div class="w-full bg-[#f8fbff] rounded-[24px] p-5 flex items-center gap-4 mb-5 border border-primaryLight">
+                        <div class="w-14 h-14 bg-white rounded-full flex items-center justify-center shadow-sm">
+                            <span class="material-symbols-outlined text-primary text-3xl">folder</span>
+                        </div>
+                        <div class="flex-1">
+                            <div class="w-24 h-3.5 bg-primary opacity-40 rounded-full mb-3"></div>
+                            <div class="w-20 h-2.5 bg-primary opacity-20 rounded-full"></div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Abstract overlapping element -->
+                <div class="absolute top-24 right-12 w-20 h-20 bg-white rounded-[20px] shadow-xl flex items-center justify-center rotate-12 border border-surface">
+                    <span class="material-symbols-outlined text-destructive text-4xl">favorite</span>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
