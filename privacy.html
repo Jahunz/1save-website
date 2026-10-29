@@ -44,46 +44,104 @@ gtag('config', 'G-3QZ41BPEPX');
 </div>
 </header>
 <main id="main">
-<section class="doc-hero"><div class="wrap"><img src="assets/savy/cover.svg" alt="" width="84" height="92"><div><h1>Privacy Policy</h1><p>How 1Save collects, uses and protects your information.</p></div></div></section>
+<section class="doc-hero"><div class="wrap"><img src="assets/savy/cover.svg" alt="" width="84" height="92"><div><h1>Privacy Policy</h1><p>What we collect, what stays on your phone, and your choices.</p></div></div></section>
 <div class="doc"><article class="doc-card">
-<h2>Introduction</h2>
-        <p>Welcome to 1Save! Your privacy is important to us. This Privacy Policy explains how we collect, use, and protect your information when you use our app and services.</p>
+<p class="updated"><strong>Last updated:</strong> October 29, 2026</p>
+<div class="callout">
+<p><strong>The short version</strong></p>
+<ul>
+<li>On the free plan, your links, notes, folders and images stay on your phone. We don't upload them.</li>
+<li>From everyone, we collect only what keeps the app running and healthy: an account ID, crash reports and basic device info.</li>
+<li>Premium backs up your saves to the cloud so they sync between devices. Secret folders are never uploaded.</li>
+<li>No ads, no ad tracking, and we never sell your data.</li>
+</ul>
+</div>
 
-        <h2>Information We Collect</h2>
-        <p>We collect the following types of information:</p>
-        <ul>
-            <li><strong>Personal Information:</strong> If you sign up for a premium account, we may collect your email address and payment details.</li>
-            <li><strong>Saved Content:</strong> URLs, folder names, and metadata you save within the app.</li>
-            <li><strong>Device Information:</strong> Basic device data (e.g., operating system, app version) to ensure compatibility and improve performance.</li>
-        </ul>
+<h2>Who we are</h2>
+<p>1Save ("we", "us") makes the 1Save Android app and the website 1save.app. This policy explains what information we handle, why, and the choices you have. Questions? Email <a href="mailto:support@1save.app">support@1save.app</a>.</p>
 
-        <h2>How We Use Your Information</h2>
-        <p>Your data is used to provide and improve our services:</p>
-        <ul>
-            <li>Sync your saved content across devices (for premium users).</li>
-            <li>Backup your data securely to prevent loss.</li>
-            <li>Analyze app performance and fix issues.</li>
-        </ul>
+<h2>What stays on your phone</h2>
+<p>The following is stored on your device. On the free plan, none of it leaves your phone. With Premium, your saves are also backed up to the cloud (see <a href="#premium">Premium</a> below), but your PIN and clipboard always stay on your phone.</p>
+<ul>
+<li>The links, images and screenshots you save, with their titles, preview images and your notes.</li>
+<li>Your folders, reminders and app settings. Reminders are scheduled on your phone, not sent from our servers.</li>
+<li>Your secret folder PIN. We store only a scrambled (hashed) version in your phone's secure storage, and we can't see or recover it.</li>
+<li>Clipboard checks. When you open 1Save, the app looks at your clipboard for a link so it can offer to save it. The clipboard content isn't sent to us.</li>
+</ul>
+<p>On the free plan, if you uninstall the app or lose your phone, your saves are gone, so consider Premium backup if that matters to you.</p>
 
-        <h2>Data Storage and Security</h2>
-        <p>We use a <strong>Local-First</strong> approach, meaning your data is primarily stored on your device. For all users, saved links and associated metadata are collected and securely stored. For premium users, data is synced to Google Cloud Firestore for backup and multi-device access. We implement industry-standard security measures to protect your data, including encryption and secure authentication protocols.</p>
+<h2>What we collect from everyone</h2>
+<p>We collect a small amount of information to run the app, keep it stable and prevent abuse:</p>
+<ul>
+<li><strong>Account ID.</strong> When you first open 1Save, the app creates an anonymous account ID with Firebase Authentication. It isn't linked to your name.</li>
+<li><strong>Google account details (only if you sign in with Google).</strong> Your email address, name and profile photo, used to identify your account and show your profile.</li>
+<li><strong>Crash reports.</strong> If the app crashes, Firebase Crashlytics sends us a report with the error details, device model, Android version and app version. We use it only to fix bugs.</li>
+<li><strong>Device record.</strong> A random ID created by the app (not your phone's hardware ID), plus device model, Android version, app version and the last sync time.</li>
+<li><strong>App status.</strong> Whether you're on Premium, whether you finished onboarding and the getting-started tasks. This helps us understand where people get stuck.</li>
+<li><strong>App integrity check.</strong> Firebase App Check confirms requests come from the genuine 1Save app, which protects our servers from abuse.</li>
+</ul>
 
-        <h2>Your Rights</h2>
-        <p>You have the right to:</p>
-        <ul>
-            <li>Access and export your data.</li>
-            <li>Delete your account and associated data.</li>
-        </ul>
-        <p>To exercise these rights, contact us at <a href="mailto:support@1save.app">support@1save.app</a>.</p>
+<h2>Link previews</h2>
+<p>When you save a link, 1Save fetches its title and preview image. To do that, the link is sent to one of the following:</p>
+<ul>
+<li>The site's own preview service, for TikTok, YouTube, Vimeo and Reddit. This request goes straight from your phone to that site.</li>
+<li>Our preview server, which runs on Cloudflare, opens the page and returns its title and image.</li>
+<li>A hidden browser inside the app on your phone, if the other two can't read the page.</li>
+</ul>
+<p>The link is used only to build the preview. On the free plan it isn't saved to your account on our servers. Sites you send links to may handle the request under their own privacy policies.</p>
 
-        <h2>Third-Party Services</h2>
-        <p>We use third-party services like Firebase for authentication and Firestore for data backup. These services comply with strict data protection regulations.</p>
+<h2 id="premium">Premium: backup and sync</h2>
+<p>If you subscribe to Premium, we back up your saved links, notes, folders and images to Google Cloud Firestore and Firebase Storage, so they're safe and sync across your devices.</p>
+<p>Items in secret folders are never uploaded. If a backed-up item is moved into a secret folder, its cloud copy is deleted.</p>
+<p>Subscriptions are processed by Google Play. We use RevenueCat to check whether your subscription is active; it receives your account ID and purchase information from Google Play. We never see your card or payment details.</p>
 
-        <h2>Changes to This Policy</h2>
-        <p>We may update this Privacy Policy from time to time. Any changes will be posted on this page with an updated revision date.</p>
+<h2>How we use information</h2>
+<ul>
+<li>To provide the app's features, including previews and Premium sync.</li>
+<li>To find and fix crashes and bugs.</li>
+<li>To protect the service from abuse and fraud.</li>
+<li>To answer you when you contact support.</li>
+</ul>
+<p>We don't show ads, we don't use advertising trackers, and we don't sell or rent your information to anyone.</p>
 
-        <h2>Contact Us</h2>
-        <p>If you have any questions about this Privacy Policy, please contact us at <a href="mailto:support@1save.app">support@1save.app</a>.</p>
+<h2>Services we use</h2>
+<ul>
+<li><strong>Google Firebase</strong> (Authentication, Firestore, Storage, Crashlytics, App Check): accounts, Premium backup, crash reports and integrity checks.</li>
+<li><strong>Google Sign-In</strong>: optional sign-in.</li>
+<li><strong>Google Play Billing</strong> and <strong>RevenueCat</strong>: subscriptions.</li>
+<li><strong>Cloudflare</strong>: our link preview server.</li>
+<li><strong>Tally</strong>: the account deletion request form.</li>
+<li><strong>Google Analytics</strong>: visit statistics on this website only, not in the app.</li>
+</ul>
+<p>Each provider handles data under its own privacy terms and only for the purpose above.</p>
+
+<h2>How long we keep it</h2>
+<ul>
+<li>Data on your phone stays until you delete it or uninstall the app.</li>
+<li>Account, device and Premium backup data stay until you delete your account.</li>
+<li>Crash reports are kept by Firebase Crashlytics for a limited time (currently 90 days).</li>
+</ul>
+
+<h2>Your choices and rights</h2>
+<ul>
+<li><strong>Delete your account</strong> and its cloud data at any time on the <a href="delete-account.html">delete account page</a> or by emailing us.</li>
+<li><strong>Get a copy</strong> of the data we hold about you, or ask us to correct it, by emailing us.</li>
+<li><strong>Turn off reminders</strong> in the app or in your phone's notification settings.</li>
+<li><strong>Cancel Premium</strong> in Google Play. Your saves stay on your phone after Premium ends.</li>
+</ul>
+<p>We respond to requests within 30 days.</p>
+
+<h2>Security</h2>
+<p>Data sent between the app and our services is encrypted in transit. Cloud data is protected by access rules so only your account can read it. No system is perfectly secure, but we work to keep your information safe and collect as little as we can.</p>
+
+<h2>Children</h2>
+<p>1Save is not intended for children under 13, and we don't knowingly collect information from them. If you believe a child has given us information, contact us and we'll delete it.</p>
+
+<h2>Changes to this policy</h2>
+<p>If we change this policy, we'll update the date at the top of this page. For important changes, we'll also let you know in the app.</p>
+
+<h2>Contact</h2>
+<p>Email <a href="mailto:support@1save.app">support@1save.app</a>.</p>
 </article></div>
 </main>
 <footer class="site-footer">
