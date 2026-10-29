@@ -1,496 +1,184 @@
 <!DOCTYPE html>
-
-<html class="light" lang="en">
-
+<html lang="en">
 <head>
-    <meta charset="utf-8" />
-    <link rel="icon" href="assets/favicon.png" sizes="48x48" type="image/png">
-    <link rel="icon" href="assets/favicon.png" sizes="96x96" type="image/png">
-    <link rel="icon" href="assets/favicon.png" sizes="144x144" type="image/png">
-    <link rel="apple-touch-icon" href="assets/logo.png">
-    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
-    <meta name="description" content="1Save: The secure private vault to save social media links, set smart reminders, and protect content with password-locked folders.">
-    <meta name="keywords" content="productivity, link saver, social media bookmarks, private folder, password lock app, 1save">
-    <meta name="robots" content="index, follow">
-    <meta property="og:title" content="1Save - Your Secure Link Vault">
-    <meta property="og:description" content="Save links, set reminders, and lock your content.">
-    <meta property="og:image" content="https://1save.app/assets/web_preview.png?v=2">
-    <meta property="og:url" content="https://1save.app">
-    <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="1Save - Your Secure Link Vault">
-    <meta name="twitter:description" content="Save links, set reminders, and lock your content.">
-    <meta name="twitter:image" content="https://1save.app/assets/web_preview.png?v=2">
-    <script async src="https://tally.so/widgets/embed.js"></script>
-    <title>1Save | One Tap. One Vault.</title>
-    <!-- Material Symbols -->
-    <link
-        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
-        rel="stylesheet" />
-    <!-- Fonts: Montserrat as per Design System -->
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&display=swap"
-        rel="stylesheet" />
-    <link
-        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
-        rel="stylesheet" />
-    <!-- Google tag (gtag.js) -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-3QZ41BPEPX"></script>
-    <script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);}
-    gtag('js', new Date());
-
-    gtag('config', 'G-3QZ41BPEPX');
-    </script>
-    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
-    <script id="tailwind-config">
-        tailwind.config = {
-            darkMode: "class",
-            theme: {
-                extend: {
-                    colors: {
-                        "on-surface-variant": "#424753",
-                        "on-primary-fixed": "#001a41",
-                        "on-tertiary-fixed": "#261a00",
-                        "tertiary-fixed": "#ffdfa0",
-                        "on-secondary-fixed-variant": "#31466f",
-                        "on-tertiary": "#ffffff",
-                        "surface-variant": "#e3e2e6",
-                        "on-error-container": "#93000a",
-                        "primary-fixed": "#d8e2ff",
-                        "secondary-fixed": "#d8e2ff",
-                        "on-secondary-container": "#415680",
-                        "tertiary-fixed-dim": "#fbbc05",
-                        "error": "#ba1a1a",
-                        "outline": "#727785",
-                        "on-secondary": "#ffffff",
-                        "primary-fixed-dim": "#adc6ff",
-                        "surface-tint": "#005ac1",
-                        "secondary": "#495e89",
-                        "on-background": "#1a1b1e",
-                        "secondary-fixed-dim": "#b1c6f7",
-                        "surface-dim": "#dbd9dd",
-                        "outline-variant": "#c2c6d5",
-                        "background": "#faf9fd",
-                        "tertiary-container": "#956e00",
-                        "on-tertiary-fixed-variant": "#5c4300",
-                        "on-error": "#ffffff",
-                        "primary-container": "#2771df",
-                        "inverse-on-surface": "#f1f0f4",
-                        "surface-container-low": "#f4f3f7",
-                        "surface": "#faf9fd",
-                        "on-secondary-fixed": "#001a41",
-                        "on-primary": "#ffffff",
-                        "primary": "#0058bd",
-                        "error-container": "#ffdad6",
-                        "on-tertiary-container": "#fffbff",
-                        "surface-container": "#efedf1",
-                        "surface-container-lowest": "#ffffff",
-                        "tertiary": "#765700",
-                        "on-primary-fixed-variant": "#004494",
-                        "on-primary-container": "#fefcff",
-                        "surface-container-highest": "#e3e2e6",
-                        "inverse-primary": "#adc6ff",
-                        "secondary-container": "#b7ccfd",
-                        "surface-container-high": "#e9e7eb",
-                        "on-surface": "#1a1b1e",
-                        "surface-bright": "#faf9fd",
-                        "inverse-surface": "#2f3033"
-                    },
-                    fontFamily: {
-                        "headline": ["Montserrat", "sans-serif"],
-                        "body": ["Montserrat", "sans-serif"],
-                        "label": ["Montserrat", "sans-serif"]
-                    },
-                    borderRadius: { "DEFAULT": "1rem", "lg": "2rem", "xl": "3rem", "full": "9999px" },
-                },
-            },
-        }
-    </script>
-    <script type="application/ld+json">
-    {
-      "@context": "https://schema.org",
-      "@type": "SoftwareApplication",
-      "name": "1Save",
-      "operatingSystem": "Android",
-      "applicationCategory": "UtilitiesApplication"
-    }
-    </script>
-    <style>
-        .material-symbols-outlined {
-            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
-            display: inline-block;
-            line-height: 1;
-        }
-
-        .squircle {
-            border-radius: 1.5rem;
-        }
-
-        .no-border-tonal-shift {
-            border: none !important;
-        }
-
-        .glass-nav {
-            backdrop-filter: blur(20px);
-        }
-
-        body {
-            font-family: 'Montserrat', sans-serif;
-            line-height: 1.5;
-        }
-
-        h1,
-        h2,
-        h3,
-        h4 {
-            font-family: 'Montserrat', sans-serif;
-            letter-spacing: -0.02em;
-            font-weight: 700;
-        }
-    </style>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>1Save: save any link in one tap</title>
+<meta name="description" content="Save links, videos and images from any app in one tap. Folders, notes and smart reminders, with Savy keeping it all safe. Free on Android.">
+<link rel="canonical" href="https://1save.app/">
+<meta name="theme-color" content="#FAFAF7">
+<link rel="icon" href="assets/favicon.png" sizes="48x48" type="image/png">
+<link rel="icon" href="assets/favicon-192.png" sizes="192x192" type="image/png">
+<link rel="apple-touch-icon" href="assets/logo.png">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="1Save">
+<meta property="og:title" content="1Save: save any link in one tap">
+<meta property="og:description" content="Save links, videos and images from any app in one tap. Folders, notes and smart reminders, with Savy keeping it all safe. Free on Android.">
+<meta property="og:url" content="https://1save.app/">
+<meta property="og:image" content="https://1save.app/assets/web_preview.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="1Save: save any link in one tap">
+<meta name="twitter:description" content="Save links, videos and images from any app in one tap. Folders, notes and smart reminders, with Savy keeping it all safe. Free on Android.">
+<meta name="twitter:image" content="https://1save.app/assets/web_preview.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&amp;family=Space+Grotesk:wght@500;700&amp;display=swap">
+<link rel="stylesheet" href="assets/site.css">
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-3QZ41BPEPX"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-3QZ41BPEPX');
+</script>
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"SoftwareApplication","name":"1Save","operatingSystem":"Android","applicationCategory":"UtilitiesApplication","url":"https://1save.app/","offers":{"@type":"Offer","price":"0","priceCurrency":"USD"},"downloadUrl":"https://play.google.com/store/apps/details?id=com.onesave.app"}
+</script>
 </head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+<header class="site-header" id="top">
+<div class="wrap">
+<a class="brand" href="index.html"><img src="assets/logo.png" alt="" width="38" height="38">1Save</a>
+<nav class="nav" aria-label="Main"><a class="navlink" href="#how">How it works</a><a class="navlink" href="#features">Features</a><a class="navlink" href="#plans">Premium</a><a class="navlink" href="#faq">FAQ</a><a class="btn btn-primary btn-small" href="https://play.google.com/store/apps/details?id=com.onesave.app" target="_blank" rel="noopener noreferrer"><svg width="20" height="20" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 3.5v17l10-8.5z" fill="#0F172A"/><path d="M15 12l3.6-3.1 2.4 1.4c1.3.8 1.3 2.6 0 3.4l-2.4 1.4z" fill="#0F172A"/></svg>Get the app</a></nav>
+</div>
+</header>
+<main id="main">
 
-<body class="bg-background text-on-surface selection:bg-tertiary-fixed selection:text-on-tertiary-fixed">
-    <!-- TopNavBar -->
-    <nav class="fixed top-0 w-full z-50 bg-[#faf9fd]/60 backdrop-blur-xl shadow-sm no-border-tonal-shift">
-        <div class="max-w-7xl mx-auto px-8 py-4 flex justify-between items-center">
-            <div class="flex items-center gap-3 text-[#1a1b1e] font-extrabold text-xl">
-                <img src="assets/logo.png" alt="1Save Logo" class="w-8 h-8 rounded-lg shadow-sm" />
-                <span class="font-headline tracking-tight">1Save</span>
-            </div>
-            <!-- <div class="hidden md:flex items-center gap-10">
-                <a class="text-[#0058bd] font-semibold border-b-2 border-[#fbbc05]" href="#vault">Vault</a>
-                <a class="text-[#1a1b1e]/70 hover:text-[#0058bd] transition-colors duration-200"
-                    href="#archival">Archival</a>
-                <a class="text-[#1a1b1e]/70 hover:text-[#0058bd] transition-colors duration-200"
-                    href="#intelligence">Intelligence</a>
-                <a class="text-[#1a1b1e]/70 hover:text-[#0058bd] transition-colors duration-200"
-                    href="#control">Control</a>
-            </div> -->
-            <div class="flex items-center gap-6">
-                <!-- <button class="material-symbols-outlined text-on-surface-variant hover:text-primary transition-colors"
-                    data-icon="search">search</button> -->
-                <a href="https://play.google.com/store/apps/details?id=com.onesave.app" target="_blank" rel="noopener noreferrer"
-                    class="bg-primary text-white px-6 py-2.5 squircle font-semibold text-sm hover:scale-95 transition-transform inline-flex items-center justify-center">Start
-                    Saving</a>
-            </div>
-        </div>
-    </nav>
-    <main class="pt-32">
-        <!-- Hero Section -->
-        <section id="vault" class="max-w-7xl mx-auto px-8 mb-32 flex flex-col items-center text-center">
-            <h1 class="text-6xl md:text-8xl font-extrabold text-on-surface mb-8 max-w-4xl">
-                One Tap. <br />One Vault. <br /><span class="text-primary">1Save.</span>
-            </h1>
-            <p class="text-xl text-on-surface-variant max-w-2xl leading-relaxed mb-12">
-                Your digital world is scattered. Anchor it in a single, high-performance space designed for what
-                matters.
-            </p>
-            <div class="flex flex-col md:flex-row gap-4">
-                <a href="https://play.google.com/store/apps/details?id=com.onesave.app" target="_blank" rel="noopener noreferrer"
-                    class="bg-[#fbbc05] text-on-tertiary-fixed px-10 py-4 squircle font-bold text-lg shadow-lg hover:shadow-xl transition-all inline-flex items-center justify-center">
-                    Start Saving
-                </a>
-                <button
-                    onclick="document.getElementById('control').scrollIntoView({behavior: 'smooth'});" class="border-2 border-primary text-primary px-10 py-4 squircle font-bold text-lg hover:bg-primary/5 transition-colors">
-                    View Features
-                </button>
-            </div>
-            <!-- Hero Visual: Stacked Archival Layers -->
-            <!-- <div class="mt-20 relative w-full max-w-5xl mx-auto h-[400px]">
-                <div class="absolute inset-0 bg-surface-container-low rounded-[3rem] -rotate-1 translate-y-4"></div>
-                <div class="absolute inset-0 bg-surface-container-high rounded-[3rem] rotate-1 -translate-y-2"></div>
-                <div
-                    class="absolute inset-0 bg-white rounded-[3rem] shadow-xl overflow-hidden flex items-center justify-center p-8">
-                    <img alt="Digital Vault Preview" class="w-full h-full object-cover squircle opacity-90"
-                        data-alt="Abstract minimalist digital workspace with soft blue and gold gradients, organized paper layers, and clean professional aesthetic"
-                        src="https://lh3.googleusercontent.com/aida-public/AB6AXuAvePp4xPDUslLRG2zgxNUKfTqu3enCT2t_OxlQFzrQS8rg49VrLR9F2S0gYQdDVfgMlqECQtsyTES9bEi931s3Ng56QjIVciK7lMTn7qiNWEAPFZwXsuS7qIKYN00SHs3IjnBW7NGJ1VELMphorkQx0uzkbYGcXGk_nJCib_mC557qIvaH-CwHkFf1GNFGi-wAvz7qtnr8xlsln51xY4zOaQeDU4K0sUvRoGCCcbFMqKjes8ncb5dm25Ln8e6ga7Gaxm5yUwi1hhmE" />
-                    <div
-                        class="absolute bottom-12 left-12 right-12 bg-white/80 backdrop-blur-md p-8 squircle flex items-center justify-between shadow-sm">
-                        <div class="flex items-center gap-4">
-                            <div
-                                class="w-12 h-12 bg-primary-container rounded-xl flex items-center justify-center text-white">
-                                <span class="material-symbols-outlined" data-icon="cloud_done"
-                                    style="font-variation-settings: 'FILL' 1;">cloud_done</span>
-                            </div>
-                            <div class="text-left">
-                                <p class="font-headline font-bold text-on-surface">Sync Complete</p>
-                                <p class="text-xs text-on-surface-variant">Securely backed up to cloud</p>
-                            </div>
-                        </div>
-                        <div class="h-1 w-32 bg-surface-container-highest rounded-full overflow-hidden">
-                            <div class="h-full bg-tertiary-fixed-dim w-3/4"></div>
-                        </div>
-                    </div>
-                </div>
-            </div> -->
-        </section>
-                <!-- How It Works Section -->
-                <section id="how" class="max-w-5xl mx-auto px-8 mb-32">
-                    <div class="bg-white squircle shadow-md p-10 md:p-16 text-center">
-                        <span class="text-primary font-bold uppercase tracking-widest text-xs mb-4 block">How It Works</span>
-                        <h2 class="text-3xl md:text-4xl font-bold mb-8">Save Anything. Find It Instantly.</h2>
-                        <div class="grid grid-cols-1 md:grid-cols-3 gap-8 text-left">
-                            <div class="flex flex-col items-center">
-                                <div class="w-14 h-14 bg-primary-fixed rounded-2xl flex items-center justify-center mb-4">
-                                    <span class="material-symbols-outlined text-primary text-3xl" data-icon="share">share</span>
-                                </div>
-                                <h3 class="font-bold mb-2">1. Capture Instantly</h3>
-                                <p class="text-on-surface-variant text-sm">Use your device's share menu to save links, articles, or notes from any app in one tap.</p>
-                            </div>
-                            <div class="flex flex-col items-center">
-                                <div class="w-14 h-14 bg-tertiary-fixed rounded-2xl flex items-center justify-center mb-4">
-                                    <span class="material-symbols-outlined text-tertiary text-3xl" data-icon="folder_special">folder_special</span>
-                                </div>
-                                <h3 class="font-bold mb-2">2. Organize Effortlessly</h3>
-                                <p class="text-on-surface-variant text-sm">Group your saves into folders, add notes for easy retrieval.</p>
-                            </div>
-                            <div class="flex flex-col items-center">
-                                <div class="w-14 h-14 bg-primary-fixed rounded-2xl flex items-center justify-center mb-4">
-                                    <span class="material-symbols-outlined text-primary text-3xl" data-icon="search">search</span>
-                                </div>
-                                <h3 class="font-bold mb-2">3. Find & Resurface</h3>
-                                <p class="text-on-surface-variant text-sm">Instantly search your vault or set reminders to resurface what matters, when it matters.</p>
-                            </div>
-                        </div>
-                    </div>
-                </section>
-        <!-- The Capture Block -->
-        <!-- <section id="archival" class="max-w-7xl mx-auto px-8 mb-32">
-            <div class="bg-surface-container-low squircle p-12 md:p-24 flex flex-col md:flex-row items-center gap-16">
-                <div class="w-full md:w-1/2">
-                    <span class="text-tertiary font-bold uppercase tracking-widest text-xs mb-4 block">Frictionless
-                        Entry</span>
-                    <h2 class="text-4xl md:text-5xl font-bold mb-6">The Capture Block</h2>
-                    <p class="text-lg text-on-surface-variant leading-relaxed mb-8">
-                        Preservation begins with a single tap. 1Save eliminates the distance between discovery and
-                        storage. Capture bookmarks, code snippets, and intellectual fragments instantly without leaving
-                        your workflow.
-                    </p>
-                    <ul class="space-y-4">
-                        <li class="flex items-center gap-3">
-                            <span class="material-symbols-outlined text-primary" data-icon="check_circle"
-                                style="font-variation-settings: 'FILL' 1;">check_circle</span>
-                            <span class="font-medium">Native OS Share Menu integration</span>
-                        </li>
-                        <li class="flex items-center gap-3">
-                            <span class="material-symbols-outlined text-primary" data-icon="check_circle"
-                                style="font-variation-settings: 'FILL' 1;">check_circle</span>
-                            <span class="font-medium">Automated metadata extraction</span>
-                        </li>
-                        <li class="flex items-center gap-3">
-                            <span class="material-symbols-outlined text-primary" data-icon="check_circle"
-                                style="font-variation-settings: 'FILL' 1;">check_circle</span>
-                            <span class="font-medium">Local-first database architecture</span>
-                        </li>
-                    </ul>
-                </div>
-                <div class="w-full md:w-1/2 grid grid-cols-2 gap-4">
-                    <div class="bg-white p-6 squircle shadow-sm space-y-4">
-                        <div class="w-10 h-10 bg-primary-fixed rounded-lg flex items-center justify-center">
-                            <span class="material-symbols-outlined text-primary" data-icon="bookmark"
-                                style="font-variation-settings: 'FILL' 1;">bookmark</span>
-                        </div>
-                        <p class="font-bold text-sm">Article Saved</p>
-                        <div class="h-2 w-full bg-surface-container rounded-full"></div>
-                    </div>
-                    <div class="bg-white p-6 squircle shadow-sm space-y-4 mt-8">
-                        <div class="w-10 h-10 bg-tertiary-fixed rounded-lg flex items-center justify-center">
-                            <span class="material-symbols-outlined text-tertiary" data-icon="code"
-                                style="font-variation-settings: 'FILL' 1;">code</span>
-                        </div>
-                        <p class="font-bold text-sm">Snippet Cached</p>
-                        <div class="h-2 w-full bg-surface-container rounded-full"></div>
-                    </div>
-                </div>
-            </div>
-        </section> -->
-        <!-- The Analytics Block -->
-        <!-- <section id="intelligence" class="max-w-7xl mx-auto px-8 mb-32 text-center">
-            <div class="max-w-3xl mx-auto mb-16">
-                <span class="text-primary font-bold uppercase tracking-widest text-xs mb-4 block">Structural
-                    Logic</span>
-                <h2 class="text-4xl md:text-5xl font-bold mb-6">The Analytics Block</h2>
-                <p class="text-lg text-on-surface-variant leading-relaxed">
-                    A vault is only as good as its structure. 1Save helps you securely organize and group your data,
-                    keeping a clear and clean overview of your digital assets.
-                </p>
-            </div>
-            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-                <div class="bg-white p-10 squircle shadow-sm hover:shadow-md transition-shadow text-left group">
-                    <div
-                        class="w-14 h-14 bg-surface-container-low rounded-2xl flex items-center justify-center mb-6 group-hover:bg-primary/10 transition-colors">
-                        <span class="material-symbols-outlined text-primary text-3xl" data-icon="folder">folder</span>
-                    </div>
-                    <h3 class="text-xl font-bold mb-3">Structured Folders</h3>
-                    <p class="text-on-surface-variant text-sm leading-relaxed">Group related links and content into
-                        dedicated, easy-to-navigate logical folders.</p>
-                </div>
-                <div class="bg-white p-10 squircle shadow-sm hover:shadow-md transition-shadow text-left group">
-                    <div
-                        class="w-14 h-14 bg-surface-container-low rounded-2xl flex items-center justify-center mb-6 group-hover:bg-primary/10 transition-colors">
-                        <span class="material-symbols-outlined text-primary text-3xl" data-icon="bolt">bolt</span>
-                    </div>
-                    <h3 class="text-xl font-bold mb-3">High Performance</h3>
-                    <p class="text-on-surface-variant text-sm leading-relaxed">Local-first data architecture ensures
-                        near-instant loading and interaction times.</p>
-                </div>
-                <div class="bg-white p-10 squircle shadow-sm hover:shadow-md transition-shadow text-left group">
-                    <div
-                        class="w-14 h-14 bg-surface-container-low rounded-2xl flex items-center justify-center mb-6 group-hover:bg-primary/10 transition-colors">
-                        <span class="material-symbols-outlined text-primary text-3xl" data-icon="search">search</span>
-                    </div>
-                    <h3 class="text-xl font-bold mb-3">Instant Search</h3>
-                    <p class="text-on-surface-variant text-sm leading-relaxed">Quickly filter your entire repository by
-                        title or URL without distraction.</p>
-                </div>
-            </div>
-        </section> -->
-        <!-- The Retrieval Block -->
-        <!-- <section class="max-w-7xl mx-auto px-8 mb-32">
-            <div class="flex flex-col md:flex-row-reverse items-center gap-16">
-                <div class="w-full md:w-1/2">
-                    <span class="text-tertiary font-bold uppercase tracking-widest text-xs mb-4 block">The Gold
-                        Standard</span>
-                    <h2 class="text-4xl md:text-5xl font-bold mb-6">The Retrieval Block</h2>
-                    <p class="text-lg text-on-surface-variant leading-relaxed mb-8">
-                        Information is useless if hidden. Our "Gold Bookmark" system highlights the most relevant
-                        fragments from your history exactly when you need them. No digging, just discovery.
-                    </p>
-                    <div class="space-y-6">
-                        <div class="flex gap-4 p-4 bg-white squircle shadow-sm border-l-4 border-tertiary-fixed-dim">
-                            <span class="material-symbols-outlined text-tertiary" data-icon="flash_on">flash_on</span>
-                            <div>
-                                <p class="font-bold text-sm">Lightning Fast</p>
-                                <p class="text-xs text-on-surface-variant">Instantly query your personal database.</p>
-                            </div>
-                        </div>
-                        <button
-                            class="bg-on-surface text-white px-8 py-4 squircle font-bold flex items-center gap-2 hover:bg-black transition-colors">
-                            Master the Vault
-                            <span class="material-symbols-outlined" data-icon="arrow_forward">arrow_forward</span>
-                        </button>
-                    </div>
-                </div>
-                <div class="w-full md:w-1/2 relative">
-                    <img alt="Retrieval Logic Visual" class="w-full h-[500px] object-cover squircle shadow-2xl"
-                        data-alt="Modern minimalist library archive with golden lighting and systematic glass shelves, representing organized data retrieval"
-                        src="https://lh3.googleusercontent.com/aida-public/AB6AXuDR_JICapHdgCBke3xMwIsA50qlmhyslLXcfFta8aSVLWBLsAdYXXrCGZ9UO9DQ-o_ABC1D5KmIE4ZRF1gMqV8XOjd97MjuNcE_hcjTMPdODG7VokYRhIsPHyji8BQLTJLRrSWg1cXSpw6fA3kmiWyUGHpBHrwn4kNGiiM6W3QAHHhZaMU4O2gIXUvs24CLiH9J646mwglczDPAPu4WtmwpK2QKfbg6Qc_fvHM1N_qB_8c3mK1kjIrPFARBdGjteEbJadONbOiBnqg0" />
-                    
-                    <div class="absolute -top-6 -right-6 bg-tertiary text-white p-8 squircle shadow-2xl max-w-[240px]">
-                        <span class="material-symbols-outlined text-4xl mb-4" data-icon="star"
-                            style="font-variation-settings: 'FILL' 1;">star</span>
-                        <p class="font-headline font-bold text-xl mb-2">Exact Match</p>
-                        <p class="text-xs opacity-80 leading-relaxed">Precision retrieval across your entire personal
-                            archive.</p>
-                    </div>
-                </div>
-            </div>
-        </section> -->
-        <!-- The Control Block -->
-        <section id="control" class="max-w-7xl mx-auto px-8 mb-32">
-            <div class="bg-surface-container-low squircle p-12 md:p-24 flex flex-col md:flex-row items-center gap-16">
-                <div class="w-full md:w-1/2">
-                    <span class="text-primary font-bold uppercase tracking-widest text-xs mb-4 block">Absolute
-                        Authority</span>
-                    <h2 class="text-4xl md:text-5xl font-bold mb-6">What make us different?</h2>
-                    <p class="text-lg text-on-surface-variant leading-relaxed mb-8">
-                        Your archive should actively serve you while remaining guarded. Set precise push notifications
-                        to resurface critical links exactly when needed, and lock sensitive assets behind local
-                        PIN security.
-                    </p>
-                    <ul class="space-y-4">
-                        <li class="flex items-center gap-3">
-                            <span class="material-symbols-outlined text-primary" data-icon="lock"
-                                style="font-variation-settings: 'FILL' 1;">lock</span>
-                            <span class="font-medium">Password Secure Folder</span>
-                        </li>
-                        <li class="flex items-center gap-3">
-                            <span class="material-symbols-outlined text-primary" data-icon="notifications_active"
-                                style="font-variation-settings: 'FILL' 1;">notifications_active</span>
-                            <span class="font-medium">Actionable Resurface Reminders</span>
-                        </li>
-                    </ul>
-                </div>
-                <div class="w-full md:w-1/2 flex flex-col gap-6">
+<section class="hero">
+<div class="wrap">
+<div>
+<div class="overline">Save it now. Find it later.</div>
+<h1>Dump your links here. <span class="hl">Zero stress.</span></h1>
+<p class="lead">Share from TikTok, YouTube, Instagram or any app. 1Save files it with a preview, keeps your notes, and Savy reminds you when you actually have time.</p>
+<div class="hero-cta">
+<a class="btn btn-primary" href="https://play.google.com/store/apps/details?id=com.onesave.app" target="_blank" rel="noopener noreferrer"><svg width="20" height="20" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 3.5v17l10-8.5z" fill="#0F172A"/><path d="M15 12l3.6-3.1 2.4 1.4c1.3.8 1.3 2.6 0 3.4l-2.4 1.4z" fill="#0F172A"/></svg>Get it on Google Play</a>
+<a class="btn btn-ghost" href="#how">See how it works →</a>
+</div>
+<div class="hero-note"><span><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#15803D" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12l5 5 9-10"/></svg>Free to start</span><span><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#15803D" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12l5 5 9-10"/></svg>No account needed</span><span><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#475569" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M8 2h8a2 2 0 0 1 2 2v16a2 2 0 0 1-2 2H8a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2z M11 18h2"/></svg>Android</span></div>
+</div>
+<div class="hero-art" aria-hidden="true">
+<div class="blob"></div>
+<div class="phone"><img src="assets/screens/Main.webp" alt="" width="390" height="844" fetchpriority="high"></div>
+<img class="savy" src="assets/savy/excited.svg" alt="" width="120" height="132">
+<div class="sticker s1"><span class="dot" style="background:#FACC15;border:2px solid #0F172A"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#0F172A" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12l5 5 9-10"/></svg></span><span>Saved to Recipes<small>youtube.com</small></span></div>
+<div class="sticker s2"><span class="dot" style="background:#2563EB"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#FFFFFF" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 16V11a6 6 0 0 1 12 0v5l2 2H4z M10 21h4"/></svg></span><span>Tonight, 8:00 PM<small>Savy will nudge you</small></span></div>
+</div>
+</div>
+</section>
 
-                    <div class="bg-white p-6 squircle shadow-sm flex items-center gap-6 border-l-4 border-[#005ac1]">
-                        <div
-                            class="w-12 h-12 bg-primary-fixed rounded-xl flex min-w-[3rem] items-center justify-center">
-                            <span class="material-symbols-outlined text-primary" data-icon="pin"
-                                style="font-variation-settings: 'FILL' 1;">pin</span>
-                        </div>
-                        <div>
-                            <p class="font-bold text-lg">Secure Vault Locked</p>
-                            <p class="text-sm text-on-surface-variant">PIN required for access.</p>
-                        </div>
-                    </div>
+<div class="works" aria-label="Works with"><div class="wrap"><p>Works with</p><span class="chip">TikTok</span><span class="chip">YouTube</span><span class="chip">Instagram</span><span class="chip">Facebook</span><span class="chip">X</span><span class="chip">Any browser</span></div></div>
 
-                    <div
-                        class="bg-white p-6 squircle shadow-sm flex items-center gap-6 border-l-4 border-tertiary-fixed-dim md:-translate-x-8">
-                        <div
-                            class="w-12 h-12 bg-tertiary-fixed rounded-xl flex min-w-[3rem] items-center justify-center">
-                            <span class="material-symbols-outlined text-tertiary" data-icon="schedule"
-                                style="font-variation-settings: 'FILL' 1;">schedule</span>
-                        </div>
-                        <div>
-                            <p class="font-bold text-lg">Reminder Triggered</p>
-                            <p class="text-sm text-on-surface-variant">Never missed what you saved before</p>
-                        </div>
-                    </div>
+<section class="block" id="how">
+<div class="wrap">
+<div class="section-head"><div class="overline">How it works</div><h2>Saving takes two taps</h2><p class="lead">No copying, no pasting into notes, no screenshots you’ll never find again.</p></div>
+<div class="steps">
+<article class="step"><span class="num">1</span><h3>Tap Share</h3><p>Under any post, video or page, then choose 1Save.</p><div class="shot"><img src="assets/screens/GettingStartedSheet.webp" alt="1Save guide showing how to share a link from another app" width="390" height="844" loading="lazy"></div></article>
+<article class="step"><span class="num">2</span><h3>Pick a folder</h3><p>Add a note or a reminder if you like. Tap Done.</p><div class="shot"><img src="assets/screens/SaveSheet.webp" alt="Saving a link: preview, folder chips, note and reminder" width="390" height="844" loading="lazy"></div></article>
+<article class="step"><span class="num">3</span><h3>Come back to it</h3><p>Savy reminds you at the right time, right where you left it.</p><div class="shot"><img src="assets/screens/Reminders.webp" alt="Reminders list with a link due now" width="390" height="844" loading="lazy"></div></article>
+</div>
+</div>
+</section>
 
-                </div>
-            </div>
-        </section>
-        <!-- Final CTA -->
-        <section id="pricing" class="max-w-7xl mx-auto px-8 mb-16">
-            <div class="bg-primary-container p-16 md:p-32 squircle text-center text-white relative overflow-hidden">
-                <!-- Background decorative shape -->
-                <div class="absolute top-0 right-0 w-96 h-96 bg-white/5 rounded-full -translate-y-1/2 translate-x-1/2">
-                </div>
-                <h2 class="text-4xl md:text-6xl font-extrabold mb-8 relative z-10">Secure Your Digital Legacy.</h2>
-                <p class="text-xl opacity-90 mb-12 max-w-2xl mx-auto relative z-10">Anchor your scattered digital world
-                    efficiently in 1Save today.</p>
-                <div class="flex justify-center relative z-10">
-                    <a href="https://play.google.com/store/apps/details?id=com.onesave.app" target="_blank" rel="noopener noreferrer"
-                        class="bg-white text-primary px-12 py-5 squircle font-bold text-xl shadow-xl hover:scale-105 transition-transform inline-flex items-center justify-center">
-                        Start Saving Now
-                    </a>
-                </div>
-            </div>
-        </section>
-    </main>
-    <!-- Footer -->
-    <footer class="w-full rounded-t-[2rem] mt-16 bg-[#f4f3f7] no-border-tonal-shift">
-        <div class="max-w-7xl mx-auto px-12 py-16 grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
-            <div>
-                <div class="text-[#1a1b1e] font-bold text-2xl mb-4 flex items-center gap-3">
-                    <img src="assets/logo.png" alt="1Save Logo" class="w-8 h-8 rounded-lg shadow-sm" />
-                    1Save
-                </div>
-                <p class="text-sm leading-relaxed text-[#1a1b1e]/60 max-w-md mb-8">
-                    © 2026 1Save Digital Archival. Designed for the Digital Curator. Finality in preservation, clarity
-                    in intelligence.
-                </p>
-            </div>
-            <div class="grid grid-cols-2 gap-8 text-right md:text-left">
-                <div class="flex flex-col gap-4">
-                    <a class="text-[#1a1b1e]/60 hover:text-[#0058bd] underline-offset-4 hover:underline transition-all"
-                        href="privacy.html">Privacy Policy</a>
-                    <a class="text-[#1a1b1e]/60 hover:text-[#0058bd] underline-offset-4 hover:underline transition-all"
-                        href="terms.html">Terms of Service (Short)</a>
-                    <a class="text-[#1a1b1e]/60 hover:text-[#0058bd] underline-offset-4 hover:underline transition-all"
-                        href="term_full.html">Terms of Service (Full)</a>
-                </div>
-                <div class="flex flex-col gap-4">
-                    <a class="text-[#1a1b1e]/60 hover:text-[#0058bd] underline-offset-4 hover:underline transition-all"
-                        href="#">Archival Standards</a>
-                    <a class="text-[#1a1b1e]/60 hover:text-[#0058bd] underline-offset-4 hover:underline transition-all"
-                        href="#">Contact Support</a>
-                </div>
-            </div>
-        </div>
-    </footer>
+<section class="block" id="features" style="padding-top:0">
+<div class="wrap">
+<div class="section-head"><div class="overline">Features</div><h2>Everything you saved, in one place</h2><p class="lead">Stop losing good stuff in browser tabs, DMs and the Saved tab of five different apps.</p></div>
+<div class="features">
+<article class="feature"><div class="tile" style="background:#FACC15"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#0F172A" stroke-width="2.3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 15V3 M7 8l5-5 5 5 M5 13v6a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2v-6"/></svg></div><h3>Save from any app</h3><p>Tap Share in TikTok, YouTube, Instagram, Facebook or your browser, then pick 1Save. That’s it.</p></article>
+<article class="feature"><div class="tile" style="background:#DBEAFE"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#0F172A" stroke-width="2.3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 7a2 2 0 0 1 2-2h4l2 2h8a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/></svg></div><h3>Folders that make sense</h3><p>Recipes, Travel, Watch later. Savy suggests a folder and an icon as you save.</p></article>
+<article class="feature"><div class="tile" style="background:#DBEAFE"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#0F172A" stroke-width="2.3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 16V11a6 6 0 0 1 12 0v5l2 2H4z M10 21h4"/></svg></div><h3>Reminders that actually help</h3><p>Pick Tonight, Tomorrow or a custom time. Savy nudges you, never nags.</p></article>
+<article class="feature"><div class="tile" style="background:#FACC15"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#0F172A" stroke-width="2.3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 20l4-1 11-11-3-3L5 16z"/></svg></div><h3>Notes on every link</h3><p>Add why you saved it, so future you remembers what was so good about it.</p></article>
+<article class="feature"><div class="tile" style="background:#FACC15"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#0F172A" stroke-width="2.3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 4h6v3H9z M7 5H6a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7a2 2 0 0 0-2-2h-1"/></svg></div><h3>Copy, open, saved</h3><p>Copied a link? Open 1Save and save it from the pop-up in one tap.</p></article>
+<article class="feature"><div class="tile" style="background:#0F172A"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#FACC15" stroke-width="2.3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 11h14v10H5z M8 11V8a4 4 0 0 1 8 0v3"/></svg></div><h3>Secret folders</h3><p>Lock private links behind your Master PIN. They stay on this phone and never sync.</p></article>
+</div>
+</div>
+</section>
+
+<section class="block" style="padding-top:0">
+<div class="wrap">
+<div class="secret">
+<div>
+<div class="overline">Secret folders</div>
+<h2>Some links are just for you</h2>
+<p class="lead">Gift ideas, money plans, that surprise trip. Lock them away and Savy covers his eyes while you type your PIN.</p>
+<ul>
+<li><span class="ic"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#0F172A" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 11h14v10H5z M8 11V8a4 4 0 0 1 8 0v3"/></svg></span><span><b>Master PIN.</b> Six digits open all your secret folders.</span></li>
+<li><span class="ic"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#0F172A" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M8 2h8a2 2 0 0 1 2 2v16a2 2 0 0 1-2 2H8a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2z M11 18h2"/></svg></span><span><b>Stays on this phone.</b> Secret folders are never synced or uploaded.</span></li>
+<li><span class="ic"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#0F172A" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 3l18 18 M10.6 5.1A10 10 0 0 1 12 5c6.5 0 10 7 10 7a17 17 0 0 1-3.2 4.1 M6.6 6.6A17 17 0 0 0 2 12s3.5 7 10 7a9.7 9.7 0 0 0 5.4-1.6"/></svg></span><span><b>Hide them completely</b> <span class="badge">Premium</span><br>They vanish from Home and Folders until your secret tap.</span></li>
+</ul>
+</div>
+<div class="secret-art" aria-hidden="true">
+<div class="phone"><img src="assets/screens/SecretPinPeek.webp" alt="" width="390" height="844" loading="lazy"></div>
+<img class="savy" src="assets/savy/cover.svg" alt="" width="120" height="132" loading="lazy">
+</div>
+</div>
+</div>
+</section>
+
+<section class="block" id="plans" style="padding-top:24px">
+<div class="wrap">
+<div class="section-head"><div class="overline">Plans</div><h2>Free to start. Premium when you’re hooked.</h2></div>
+<div class="plans">
+<article class="plan">
+<h3>Free</h3><p class="sub">Everything you need to start saving.</p>
+<ul>
+<li><span class="check"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#2563EB" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12l5 5 9-10"/></svg></span>Save links, images and notes from any app</li>
+<li><span class="check"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#2563EB" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12l5 5 9-10"/></svg></span>Folders with icons, and search</li>
+<li><span class="check"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#2563EB" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12l5 5 9-10"/></svg></span>Reminders</li>
+<li><span class="check"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#2563EB" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12l5 5 9-10"/></svg></span>A secret folder with your Master PIN</li>
+</ul>
+</article>
+<article class="plan premium">
+<img class="savy-mini" src="assets/savy/premium.svg" alt="" width="82" height="90" loading="lazy">
+<h3>Premium</h3><p class="sub">For people with a lot of treasure.</p>
+<ul>
+<li><span class="check"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#FACC15" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12l5 5 9-10"/></svg></span>Unlimited links and folders</li>
+<li><span class="check"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#FACC15" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12l5 5 9-10"/></svg></span>Hidden secret folders, invisible until your secret tap</li>
+<li><span class="check"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#FACC15" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12l5 5 9-10"/></svg></span>Cloud backup and sync with your Google account</li>
+<li><span class="check"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#FACC15" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12l5 5 9-10"/></svg></span>Savy in his Premium outfit</li>
+</ul>
+<p class="sub" style="margin-top:0;font-size:14px">Prices are shown in the app.</p>
+</article>
+</div>
+</div>
+</section>
+
+<section class="block" id="faq" style="padding-top:24px">
+<div class="wrap">
+<div class="section-head"><div class="overline">FAQ</div><h2>Questions, answered</h2></div>
+<div class="faq"><details><summary>Is 1Save free?<span class="pm"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#0F172A" stroke-width="2.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 5v14 M5 12h14"/></svg></span></summary><p>Yes. You can save links, images and notes, make folders, set reminders and lock a secret folder for free. Premium adds unlimited links and folders, hidden secret folders and cloud backup and sync.</p></details><details><summary>Which apps can I save from?<span class="pm"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#0F172A" stroke-width="2.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 5v14 M5 12h14"/></svg></span></summary><p>Any app with a Share button: TikTok, YouTube, Instagram, Facebook, X, Chrome and more. You can also copy a link and open 1Save, or paste it in yourself.</p></details><details><summary>Where is my data stored?<span class="pm"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#0F172A" stroke-width="2.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 5v14 M5 12h14"/></svg></span></summary><p>1Save is local-first: your links live on your phone. Premium users can back up and sync to the cloud with their Google account. Secret folders always stay on your device.</p></details><details><summary>Is there an iPhone app?<span class="pm"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#0F172A" stroke-width="2.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 5v14 M5 12h14"/></svg></span></summary><p>Not yet. 1Save is available on Android through Google Play.</p></details><details><summary>How do I delete my account?<span class="pm"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#0F172A" stroke-width="2.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 5v14 M5 12h14"/></svg></span></summary><p>Use the <a href="delete-account.html">account deletion form</a> and we’ll remove your account and its data. Questions? Email <a href="mailto:support@1save.app">support@1save.app</a>.</p></details></div>
+</div>
+</section>
+
+<section class="wrap">
+<div class="cta">
+<img class="savy" src="assets/savy/happy.svg" alt="" width="130" height="143" loading="lazy">
+<div><h2>Stop losing the stuff you care about.</h2><p>Save your first link in under a minute.</p></div>
+<a class="btn btn-primary" href="https://play.google.com/store/apps/details?id=com.onesave.app" target="_blank" rel="noopener noreferrer"><svg width="20" height="20" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 3.5v17l10-8.5z" fill="#FACC15"/><path d="M15 12l3.6-3.1 2.4 1.4c1.3.8 1.3 2.6 0 3.4l-2.4 1.4z" fill="#FACC15"/></svg>Get it on Google Play</a>
+</div>
+</section>
+
+</main>
+<footer class="site-footer">
+<div class="wrap">
+<div><a class="brand" href="index.html"><img src="assets/logo.png" alt="" width="38" height="38">1Save</a>
+<p>Save any link in one tap. Savy keeps it safe and reminds you when you have time.</p></div>
+<nav class="footer-links" aria-label="Footer">
+<a href="privacy.html">Privacy Policy</a>
+<a href="mailto:support@1save.app">Contact support</a>
+<a href="terms.html">Terms of Service</a>
+<a href="delete-account.html">Delete account</a>
+<a href="term_full.html">Full Terms (legal)</a>
+<a href="https://play.google.com/store/apps/details?id=com.onesave.app" target="_blank" rel="noopener noreferrer">Google Play</a>
+</nav>
+<div class="copyright">© 2026 1Save. Android app. Savy is the 1Save mascot.</div>
+</div>
+</footer>
+<script>
+(function(){var h=document.querySelector('.site-header');if(!h)return;var f=function(){h.classList.toggle('scrolled',window.scrollY>8)};f();window.addEventListener('scroll',f,{passive:true});})();
+</script>
 </body>
-
 </html>
